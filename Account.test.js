@@ -2,7 +2,7 @@ const Account = require("./Account.js");
 
 // Starting with only this test, take out .only once it is working
 // Add .only to the next test to do one at a time
-test.only("Account.js should export something", () => {
+test("Account.js should export something", () => {
   expect(Account).not.toBeNull();
 });
 
@@ -54,7 +54,7 @@ test("An account instance should have a 'makeWithdrawal' method", () => {
   expect(accountInstance.makeWithdrawal instanceof Function).toBe(true);
 });
 
-test("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
+test.only("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
   const accountInstance = new Account("Rein", 1000, 500);
 
   accountInstance.makeWithdrawal(100);
