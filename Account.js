@@ -17,9 +17,9 @@ class Account {
     makeWithdrawal(amount) {
 
         if (amount > (this.balance + this.creditLimit)) {
-            console.log('Sorry')
+            // console.log('Sorry')
         } else if (amount > 5000) {
-            console.log('Sorry')
+            // console.log('Sorry')
         } else {
             this.balance = this.balance - amount;
         }
